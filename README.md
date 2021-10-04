@@ -1,4 +1,4 @@
-# [GenProb]() #
+# [In Search of Probeable Generalization Measures]() #
 
 ## Table of Contents ##
 - [Adas: Adaptive Scheduling of Stochastic Gradients](#adas--adaptive-scheduling-of-stochastic-gradients)
