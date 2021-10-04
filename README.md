@@ -1,6 +1,16 @@
 # [GenProb]() #
-## Status ##
-[![License: ](https://img.shields.io/badge)](LICENSE)
-[![maintenance](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg)]
-[![python](https://img.shields.io/badge/python-v3.7-blue)](https://www.python.org/downloads/release/python-370/)
-![size](https://img.shields.io/github/repo-size/mahdihosseini/GenProb)
+
+## Table of Contents ##
+- [Adas: Adaptive Scheduling of Stochastic Gradients](#adas--adaptive-scheduling-of-stochastic-gradients)
+  * [Status](#status)
+  * [Introduction](#introduction)
+    + [Generalization Measures](#gmeasures)
+    + [GenProb Dataset](#genprob)
+    + [Results](#results)
+  * [Requirements](#requirements)
+    + [Software/Hardware](#software-hardware)
+    + [Computational Overhead](#computational-overhead)
+    + [Installation](#installation)
+    + [Usage](#usage)
+    + [Common Issues (running list)](#common-issues--running-list-)
+  * [TODO](#todo)
