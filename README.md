@@ -9,8 +9,6 @@
     + [Results](#results)
   * [Requirements](#requirements)
     + [Software/Hardware](#software-hardware)
-    + [Computational Overhead](#computational-overhead)
-    + [Installation](#installation)
     + [Usage](#usage)
     + [Common Issues (running list)](#common-issues--running-list-)
   * [TODO](#todo)
