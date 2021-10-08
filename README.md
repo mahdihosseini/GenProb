@@ -34,24 +34,13 @@ The layer-wise processing of these metrics can be found under /source/process.py
 ### GenProb Dataset ###
 Generalization Dataset for Probeable Measures is a family of trained models used to test the effectiveness of the measures for tracking generalization performance at earlier stages of training. We train families of models with varied hyperparameter and channel size configurations for 70 epochs on CIFAR10 and CIFAR100 with various optimizers. These variations are specified in the table below.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/TABLE%20-%20GenProb%20Hyperparameter%20Variation%20Summary.png?token=AKRYNROI5LGKW42VUEYUWATBMB3HW">
 
 
 
 The model architecture used is described in the below table.
 
-| **Block Index** |     **Block Type**     |  **Output Shape**  |
-|:---------------:|:----------------------:|:------------------:|
-|        0        |         input          |    32 x 32 x 3     |
-|        1        |   3 x 3 convolution    |    32 x 32 x 8     |
-|        2        |  convolutional block   | 32 x 32 x {40, 48} |
-|        3        |     residual block     | 18 x 18 x {40, 48} |
-|        4        |  convolutional block   | 18 x 18 x {40, 48} |
-|        5        |     residual block     |  9 x 9 x {40, 48}  |
-|        6        |  convolutional block   |  9 x 9 x {40, 48}  |
-|        7        | global average pooling |  1 x 1 x {40, 48}  |
-|        8        |         linear         | 1 x 1 x {10, 100}  |
-|                 |                        |                    |
+<img src="">
 
 The convolutional blocks can be described as directed acyclic graphs with five nodes of activations. All nodes re ordered, and each node is connected to all nodes in front of it with a 3x3 convolution.
 
