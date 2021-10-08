@@ -26,6 +26,8 @@ We define several measures that quantify the quality of a trained model (i.e. qu
 
 </div>
 
+The notation convention used in Table I and hereinafter torepresent  different  quality  metrics  is: <img src="https://render.githubusercontent.com/render/math?math=Q_{AGG}^{M}">QAGGMwhere  aggrega-tion  AGG∈ {L2=  depth-normalized  L2  norm,p=  depth-normalized product}and metric M∈{SQ= stable quality,E= effective rank,F= Frobenius norm,S= stable norm}.
+
 ### GenProb Dataset ###
 
 
