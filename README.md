@@ -34,15 +34,9 @@ The layer-wise processing of these metrics can be found under /source/process.py
 ### GenProb Dataset ###
 Generalization Dataset for Probeable Measures is a family of trained models used to test the effectiveness of the measures for tracking generalization performance at earlier stages of training. We train families of models with varied hyperparameter and channel size configurations for 70 epochs on CIFAR10 and CIFAR100 with various optimizers. These variations are specified in the table below.
 
-|     **Hyperparameter**     | **Size Search Space** | **Topology Search Space** |
-|:--------------------------:|:---------------------:|:-------------------------:|
-|       Learning Rate        |   0.1 → 0 (cosine)     | 0.1 → 0 (cosine)                    |
-|        Weight Decay        |         5e-4          |       5e-4                 |
-|         Batch Size         |          256          |       256                 |
-|           Epochs           |        12, 90         |          12, 200          |
-|  Channel Size Variations   |    8, 16, 24, 32, 40, 48, 56, 64   |            \-     
-| Layer Operation Variations |          \-           | zeroize, skip, 1x1 conv, 3x3 conv,  average-pool   |
-|                            |                       | 
+<img src="">
+
+
 
 The model architecture used is described in the below table.
 
