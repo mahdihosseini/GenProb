@@ -2,7 +2,6 @@
 
 ## Table of Contents ##
 - [Adas: Adaptive Scheduling of Stochastic Gradients](#adas--adaptive-scheduling-of-stochastic-gradients)
-  * [Status](#status)
   * [Introduction](#introduction)
     + [Generalization Measures](#gmeasures)
     + [GenProb Dataset](#genprob)
@@ -12,3 +11,22 @@
     + [Usage](#usage)
     + [Common Issues (running list)](#common-issues--running-list-)
   * [TODO](#todo)
+
+## Introduction ##
+
+### Generalization Measures ###
+
+
+### GenProb Dataset ###
+
+
+### Results ###
+
+## Requirements ##
+
+
+### Software ###
+
+### Usage ###
+
+### Common Issues (running list) ###
