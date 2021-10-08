@@ -32,6 +32,7 @@ The notation convention used in Table I to represent different quality  metrics 
 The layer-wise processing of these metrics can be found under /source/process.py along with a list of other metrics discluded from the paper. Convolution weight tensors are first unfolded along channel axes into a 2d matrix before metrics are calculated via processing of singular values or other norm calculations. The low rank factorization preprocessing of weight matrices is also included under the EVBMF function.
 
 ### GenProb Dataset ###
+Generalization Dataset for Probeable Measures is a family of trained models used to test the effectiveness of the measures for tracking generalization performance at earlier stages of training. We train families of models with varied hyperparameter and channel size configurations for 70 epochs on CIFAR10 and CIFAR100 with various optimizers. These variations are specified in the table below.
 
 |     **Hyperparameter**     | **Size Search Space** | **Topology Search Space** |
 |:--------------------------:|:---------------------:|:-------------------------:|
@@ -43,7 +44,7 @@ The layer-wise processing of these metrics can be found under /source/process.py
 | Layer Operation Variations |          \-           | zeroize, skip, 1x1 conv, 3x3 conv,  average-pool   |
 |                            |                       | 
 
-#### GenProb Model Architecture ####
+The model architecture used is described in the below table.
 
 | **Block Index** |     **Block Type**     |  **Output Shape**  |
 |:---------------:|:----------------------:|:------------------:|
@@ -58,8 +59,9 @@ The layer-wise processing of these metrics can be found under /source/process.py
 |        8        |         linear         | 1 x 1 x {10, 100}  |
 |                 |                        |                    |
 
-#### GenProb Model Block Architecture ####
-//Images
+The convolutional blocks can be described as directed acyclic graphs with five nodes of activations. All nodes re ordered, and each node is connected to all nodes in front of it with a 3x3 convolution.
+
+<img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/GenProb%20Model%20Block%20Architecture.png?token=AKRYNRLN2XX47ZO23JC2EA3BMBZZG">
 
 ### Results ###
 
