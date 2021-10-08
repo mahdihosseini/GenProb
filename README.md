@@ -65,7 +65,7 @@ The large correlations indicate robustness to changes in training hyperparameter
 We use `Python 3.7`.
 
 ### Software ###
-Please find required libraries in the `Requirements.txt` file.
+Please find required libraries in the `requirements.txt` file.
 
 ### Usage ###
 
