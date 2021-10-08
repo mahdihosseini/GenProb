@@ -33,6 +33,33 @@ The layer-wise processing of these metrics can be found under /source/process.py
 
 ### GenProb Dataset ###
 
+|     **Hyperparameter**     | **Size Search Space** | **Topology Search Space** |
+|:--------------------------:|:---------------------:|:-------------------------:|
+|       Learning Rate        |   0.1 → 0 (cosine)     | 0.1 → 0 (cosine)                    |
+|        Weight Decay        |         5e-4          |       5e-4                 |
+|         Batch Size         |          256          |       256                 |
+|           Epochs           |        12, 90         |          12, 200          |
+|  Channel Size Variations   |    8, 16, 24, 32, 40, 48, 56, 64   |            \-     
+| Layer Operation Variations |          \-           | zeroize, skip, 1x1 conv, 3x3 conv,  average-pool   |
+|                            |                       | 
+
+#### GenProb Model Architecture ####
+
+| **Block Index** |     **Block Type**     |  **Output Shape**  |
+|:---------------:|:----------------------:|:------------------:|
+|        0        |         input          |    32 x 32 x 3     |
+|        1        |   3 x 3 convolution    |    32 x 32 x 8     |
+|        2        |  convolutional block   | 32 x 32 x {40, 48} |
+|        3        |     residual block     | 18 x 18 x {40, 48} |
+|        4        |  convolutional block   | 18 x 18 x {40, 48} |
+|        5        |     residual block     |  9 x 9 x {40, 48}  |
+|        6        |  convolutional block   |  9 x 9 x {40, 48}  |
+|        7        | global average pooling |  1 x 1 x {40, 48}  |
+|        8        |         linear         | 1 x 1 x {10, 100}  |
+|                 |                        |                    |
+
+#### GenProb Model Block Architecture ####
+//Images
 
 ### Results ###
 
