@@ -47,11 +47,25 @@ The convolutional blocks can be described as directed acyclic graphs with five n
 <img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/GenProb%20Model%20Block%20Architecture.png?token=AKRYNRKTCYQUFPQHSRUZ7HDBMB32Y">
 
 ### Results ###
+To visualize the relationship between the quality metrics and both generalization gap and test accuracy, we produce scatter plots of test accuracy and generalization gap over the quality metrics. Furthermore, by organizing these separate scatter plots relative to the quantity of training each set of models has undergone, we can study the evolution of the relationship.
+
+we observe a lack of form in the effective rank scatter plots on models trained with AdaM on CIFAR10 in Fig. 5(a) and Fig. 5(b) at earlier epochs. The quality metric evolves into clear, strong trends with test accuracy and generalization gap as training progresses and learned structure develops in the model weights.
+
+We observe a clear linear relationship between the effective rank measure and generalization gap at later epochs, and a 2<sup>nd</sup> order relationship between the effective rank measure and test accuracy. The plateauing trend with test accuracy delineates a bound on test accuracy; maximizing effective rank above this bound would still increase generalization gap (linear trend) however, suggesting an increase in train accuracy without changes in test accuracy. It is still evident that for a model trained on CIFAR10 with AdaM, a greater effective rank indicates greater test accuracy, and a greater (negative) generalization gap.
+
+<img src="(a)">
+
+By plotting the correlations of the quality metrics with test accuracy and generalization gap in the below figures, we can understand the relative progression of the effectiveness of these measures through different stages of training. As the aforementioned trends become more distinct, the corresponding correlations increase in magnitudes, some nearly up to 1.
+
+The large correlations indicate robustness to changes in training hyperparameters, and model channel sizes. Effective rank and stable quality measures prove to be the most effective and robust generalization measures through all training phases and across dataset complexities.
+
+<img src="(b)">
 
 ## Requirements ##
-
+We use `Python 3.7`.
 
 ### Software ###
+Please find required libraries in the `Requirements.txt` file.
 
 ### Usage ###
 
