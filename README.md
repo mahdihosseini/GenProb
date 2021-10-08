@@ -13,6 +13,7 @@
   * [TODO](#todo)
 
 ## Introduction ##
+In Search of Probeable Generalization Measures (LINK TO PAPER) evaluates and compares generalization measures to establish firm ground for further investigation and incite the production of novel deep learning algorithms that improve generalization. This repository contains the scripts used to parse through GenProb, a dataset of trained deep CNNs, processing model layer weights and computing generalization measures. You can use this code to better understand how GenProb can be used to test generalization measures and HPO algorithms.
 
 ### Generalization Measures ###
 We define several measures that quantify the quality of a trained model (i.e. quality metrics or complexity measures) and describe its generalization ability. These quality metrics are probeable on individual layers of deep neural networks, and quantify the contribution of each layer as a holistic measure for network representation, unlike other popular and successful measures. The overview and equations of all chosen measures are presented in Table I below. 
@@ -27,6 +28,8 @@ We define several measures that quantify the quality of a trained model (i.e. qu
 </div>
 
 The notation convention used in Table I to represent different quality  metrics is: <img src="https://render.githubusercontent.com/render/math?math=Q_{M}^{AGG}"> where  aggregation AGG ∈ {L2 = depth-normalized L2 norm, p = depth-normalized product} and metric M ∈ {SQ = stable quality, E = effective rank, F = Frobenius norm, S = stable norm}.
+
+The layer-wise processing of these metrics can be found under /source/process.py along with a list of other metrics discluded from the paper. Convolution weight tensors are first unfolded along channel axes into a 2d matrix before metrics are calculated via processing of singular values or other norm calculations. The low rank factorization preprocessing of weight matrices is also included under the EVBMF function.
 
 ### GenProb Dataset ###
 
