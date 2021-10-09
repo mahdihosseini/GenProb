@@ -23,7 +23,7 @@ We define several measures that quantify the quality of a trained model (i.e. qu
 *Frobenius norm* (F) refers to the magnitude of a deep layer that is calculated with the sum of the squared values of a weight tensor. Frobenius norm is also calculated with the sum of the squared singular values of a layer. *Spectral norm* (S) refers to the maximum magnitude of mapping by a transformation operated by a layer that is calculated as the maximum singular value of a weight tensor.
 <div align="center">
  
-<img width="295" alt="136481979-b2241e0a-b859-4a9c-a2a7-bc0e5cb4f3ad" src="https://user-images.githubusercontent.com/77180677/136673335-97bf4a34-61fd-44aa-9328-b213fcc02aae.png">
+<img width="700" alt="136481979-b2241e0a-b859-4a9c-a2a7-bc0e5cb4f3ad" src="https://user-images.githubusercontent.com/77180677/136673335-97bf4a34-61fd-44aa-9328-b213fcc02aae.png">
 
 </div>
 
