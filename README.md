@@ -49,7 +49,7 @@ The convolutional blocks can be described as directed acyclic graphs with five n
 ### Results ###
 To visualize the relationship between the quality metrics and both generalization gap and test accuracy, we produce scatter plots of test accuracy and generalization gap over the quality metrics. Furthermore, by organizing these separate scatter plots relative to the quantity of training each set of models has undergone, we can study the evolution of the relationship.
 
-we observe a lack of form in the effective rank scatter plots on models trained with AdaM on CIFAR10 in Fig. 5(a) and Fig. 5(b) at earlier epochs. The quality metric evolves into clear, strong trends with test accuracy and generalization gap as training progresses and learned structure develops in the model weights.
+We observe a lack of form in the effective rank scatter plots on models trained with AdaM on CIFAR10 in Fig. 5(a) and Fig. 5(b) at earlier epochs. The quality metric evolves into clear, strong trends with test accuracy and generalization gap as training progresses and learned structure develops in the model weights.
 
 We observe a clear linear relationship between the effective rank measure and generalization gap at later epochs, and a 2<sup>nd</sup> order relationship between the effective rank measure and test accuracy. The plateauing trend with test accuracy delineates a bound on test accuracy; maximizing effective rank above this bound would still increase generalization gap (linear trend) however, suggesting an increase in train accuracy without changes in test accuracy. It is still evident that for a model trained on CIFAR10 with AdaM, a greater effective rank indicates greater test accuracy, and a greater (negative) generalization gap.
 
