@@ -34,38 +34,38 @@ The layer-wise processing of these metrics can be found under /source/process.py
 ### GenProb Dataset ###
 Generalization Dataset for Probeable Measures is a family of trained models used to test the effectiveness of the measures for tracking generalization performance at earlier stages of training. We train families of models with varied hyperparameter and channel size configurations for 70 epochs on CIFAR10 and CIFAR100 with various optimizers. These variations are specified in the table below.
 
-<img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/TABLE%20-%20GenProb%20Hyperparameter%20Variation%20Summary.png?token=AKRYNRJXOY4NAFNR26JUB4TBMCBQ2">
-
+<img src="https://user-images.githubusercontent.com/44271301/136673205-02c7653c-1ea9-4292-a966-e16128628fa2.png">
 
 
 The model architecture used is described in the below table.
 
-<img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/TABLE%20-%20GenProb%20Model%20Architecture.png?token=AKRYNRLUPL67J7GEK457FN3BMCBRA">
+<img src="https://user-images.githubusercontent.com/44271301/136673216-c6dd2c1f-564a-4f61-ab82-ff2f6025b232.png">
+
 
 The convolutional blocks can be described as directed acyclic graphs with five nodes of activations. All nodes re ordered, and each node is connected to all nodes in front of it with a 3x3 convolution.
 
-<img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/GenProb%20Model%20Block%20Architecture.png?token=AKRYNRIMH3V5Y3O2SD4SE2TBMCBQU">
+<img src="https://user-images.githubusercontent.com/44271301/136673227-d7dab206-cd0f-422d-a1d9-bbdcade9e9ef.png">
 
 ### Results ###
 To visualize the relationship between the quality metrics and both generalization gap and test accuracy, we produce scatter plots of test accuracy and generalization gap over the quality metrics. Furthermore, by organizing these separate scatter plots relative to the quantity of training each set of models has undergone, we can study the evolution of the relationship.
 
-we observe a lack of form in the effective rank scatter plots on models trained with AdaM on CIFAR10 in Fig. 5(a) and Fig. 5(b) at earlier epochs. The quality metric evolves into clear, strong trends with test accuracy and generalization gap as training progresses and learned structure develops in the model weights.
+We observe a lack of form in the effective rank scatter plots on models trained with AdaM on CIFAR10 at earlier epochs. The quality metric evolves into clear, strong trends with test accuracy and generalization gap as training progresses and learned structure develops in the model weights.
 
 We observe a clear linear relationship between the effective rank measure and generalization gap at later epochs, and a 2<sup>nd</sup> order relationship between the effective rank measure and test accuracy. The plateauing trend with test accuracy delineates a bound on test accuracy; maximizing effective rank above this bound would still increase generalization gap (linear trend) however, suggesting an increase in train accuracy without changes in test accuracy. It is still evident that for a model trained on CIFAR10 with AdaM, a greater effective rank indicates greater test accuracy, and a greater (negative) generalization gap.
 
-<img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/Testing%20Quality%20Measures%20with%20GENDAPRO%20(a).png?token=AKRYNRML2KHO4XU2S7X3CWTBMCBRG">
+<img src="https://user-images.githubusercontent.com/44271301/136673234-bc5e6f4b-0375-4f50-a4ba-95e0653dcbda.png">
 
 By plotting the correlations of the quality metrics with test accuracy and generalization gap in the below figures, we can understand the relative progression of the effectiveness of these measures through different stages of training. As the aforementioned trends become more distinct, the corresponding correlations increase in magnitudes, some nearly up to 1.
 
 The large correlations indicate robustness to changes in training hyperparameters, and model channel sizes. Effective rank and stable quality measures prove to be the most effective and robust generalization measures through all training phases and across dataset complexities.
 
-<img src="https://raw.githubusercontent.com/mahdihosseini/GenProb/main/img/Testing%20Quality%20Measures%20with%20GENDAPRO%20(b).png?token=AKRYNRI7SWZWJAC6Z42EXXTBMCBRM">
+<img src="https://user-images.githubusercontent.com/44271301/136673243-6ef7016b-5e39-4ffd-8a86-d222f3c2faed.png">
 
 ## Requirements ##
 We use `Python 3.7`.
 
 ### Software ###
-Please find required libraries in the `Requirements.txt` file.
+Please find required libraries in the `requirements.txt` file.
 
 ### Usage ###
 
