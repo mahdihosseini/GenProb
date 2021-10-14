@@ -19,7 +19,7 @@ In Search of Probeable Generalization Measures (LINK TO PAPER) evaluates and com
 
 ### Generalization Measures ###
 *Stable quality* (SQ) refers to the stability of encoding in a deep layer that is calculated with the relative ratio of stable rank and condition number of a layer. 
-<img src="https://render.githubusercontent.com/render/math?math=arctan\; s(\boldsymbol{W}_i) / \kappa(\boldsymbol{W}_i)">
+<img src="https://render.githubusercontent.com/render/math?math=arctan\;s(\boldsymbol{W}_i)/\kappa(\boldsymbol{W}_i)">
 
 *Effective rank* (E) refers to the dimension of the output space of the transformation operated by a deep layer that is calculated with the Shannon entropy of the normalized singular values of a layer as defined in.
 
