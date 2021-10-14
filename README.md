@@ -34,13 +34,10 @@ Generalization Dataset for Probeable Measures is a family of trained models used
 The full dataset of pytorch model files can be accessed at: (LINK) --currently being uploaded
 
 ### Results ###
-
+Generalization measures plotted against generalization performance metrics at progressive epochs of training for models optimized with Adam from the GenProb dataset.
 <img src="https://user-images.githubusercontent.com/44271301/136673234-bc5e6f4b-0375-4f50-a4ba-95e0653dcbda.png">
 
-By plotting the correlations of the quality metrics with test accuracy and generalization gap in the below figures, we can understand the relative progression of the effectiveness of these measures through different stages of training. As the aforementioned trends become more distinct, the corresponding correlations increase in magnitudes, some nearly up to 1.
-
-The large correlations indicate robustness to changes in training hyperparameters, and model channel sizes. Effective rank and stable quality measures prove to be the most effective and robust generalization measures through all training phases and across dataset complexities.
-
+Evolution of generalization measure correlation with generalization performance metrics over epochs of training for models optimized with Adam from the GenProb dataset.
 <img src="https://user-images.githubusercontent.com/44271301/136673243-6ef7016b-5e39-4ffd-8a86-d222f3c2faed.png">
 
 ## Requirements ##
