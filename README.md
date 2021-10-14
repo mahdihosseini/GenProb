@@ -19,7 +19,6 @@ In Search of Probeable Generalization Measures (LINK TO PAPER) evaluates and com
 
 ### Generalization Measures ###
 *Stable quality* (SQ) refers to the stability of encoding in a deep layer that is calculated with the relative ratio of stable rank and condition number of a layer. 
-<img src="https://render.githubusercontent.com/render/math?math=arctan"> <img src="https://render.githubusercontent.com/render/math?math=s(\boldsymbol{W}_i) / \kappa(\boldsymbol{W}_i)">
 
 *Effective rank* (E) refers to the dimension of the output space of the transformation operated by a deep layer that is calculated with the Shannon entropy of the normalized singular values of a layer as defined in.
 
@@ -27,31 +26,14 @@ In Search of Probeable Generalization Measures (LINK TO PAPER) evaluates and com
 
 *Spectral norm* (S) refers to the maximum magnitude of mapping by a transformation operated by a layer that is calculated as the maximum singular value of a weight tensor.
 
-The notation convention used in Table I to represent different quality  metrics is: <img src="https://render.githubusercontent.com/render/math?math=Q_{M}^{AGG}"> where  aggregation AGG ∈ {L2 = depth-normalized L2 norm, p = depth-normalized product} and metric M ∈ {SQ = stable quality, E = effective rank, F = Frobenius norm, S = stable norm}.
-
-The layer-wise processing of these metrics can be found under /source/process.py along with a list of other metrics discluded from the paper. Convolution weight tensors are first unfolded along channel axes into a 2d matrix before metrics are calculated via processing of singular values or other norm calculations. The low rank factorization preprocessing of weight matrices is also included under the EVBMF function.
+Further elaboration of these metrics and their equations can be found in the paper. The layer-wise processing of these metrics can be found under /source/process.py along with a list of other metrics discluded from the paper. Convolution weight tensors are first unfolded along channel axes into a 2d matrix before metrics are calculated via processing of singular values or other norm calculations. The low rank factorization preprocessing of weight matrices is also included under the EVBMF function. Metrics are aggregated accross layers 
 
 ### GenProb Dataset ###
-Generalization Dataset for Probeable Measures is a family of trained models used to test the effectiveness of the measures for tracking generalization performance at earlier stages of training. We train families of models with varied hyperparameter and channel size configurations for 70 epochs on CIFAR10 and CIFAR100 with various optimizers. These variations are specified in the table below.
+Generalization Dataset for Probeable Measures is a family of trained models used to test the effectiveness of the measures for tracking generalization performance at earlier stages of training. We train families of models with varied hyperparameter and channel size configurations as elaborated in the paper.
 
-<img src="https://user-images.githubusercontent.com/44271301/136673205-02c7653c-1ea9-4292-a966-e16128628fa2.png">
-
-
-The model architecture used is described in the below table.
-
-<img src="https://user-images.githubusercontent.com/44271301/136673216-c6dd2c1f-564a-4f61-ab82-ff2f6025b232.png">
-
-
-The convolutional blocks can be described as directed acyclic graphs with five nodes of activations. All nodes re ordered, and each node is connected to all nodes in front of it with a 3x3 convolution.
-
-<img src="https://user-images.githubusercontent.com/44271301/136673227-d7dab206-cd0f-422d-a1d9-bbdcade9e9ef.png">
+The full dataset of pytorch model files can be accessed at: (LINK) --currently being uploaded
 
 ### Results ###
-To visualize the relationship between the quality metrics and both generalization gap and test accuracy, we produce scatter plots of test accuracy and generalization gap over the quality metrics. Furthermore, by organizing these separate scatter plots relative to the quantity of training each set of models has undergone, we can study the evolution of the relationship.
-
-We observe a lack of form in the effective rank scatter plots on models trained with AdaM on CIFAR10 at earlier epochs. The quality metric evolves into clear, strong trends with test accuracy and generalization gap as training progresses and learned structure develops in the model weights.
-
-We observe a clear linear relationship between the effective rank measure and generalization gap at later epochs, and a 2<sup>nd</sup> order relationship between the effective rank measure and test accuracy. The plateauing trend with test accuracy delineates a bound on test accuracy; maximizing effective rank above this bound would still increase generalization gap (linear trend) however, suggesting an increase in train accuracy without changes in test accuracy. It is still evident that for a model trained on CIFAR10 with AdaM, a greater effective rank indicates greater test accuracy, and a greater (negative) generalization gap.
 
 <img src="https://user-images.githubusercontent.com/44271301/136673234-bc5e6f4b-0375-4f50-a4ba-95e0653dcbda.png">
 
