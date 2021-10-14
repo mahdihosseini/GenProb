@@ -18,16 +18,14 @@ In Search of Probeable Generalization Measures (LINK TO PAPER) evaluates and com
 ![image](https://user-images.githubusercontent.com/77180677/137248344-66d65abf-0a94-4b43-a269-b9f2b6c78e12.png)
 
 ### Generalization Measures ###
-We define several measures that quantify the quality of a trained model (i.e. quality metrics or complexity measures) and describe its generalization ability. These quality metrics are probeable on individual layers of deep neural networks, and quantify the contribution of each layer as a holistic measure for network representation, unlike other popular and successful measures. The overview and equations of all chosen measures are presented in the table below. 
+*Stable quality* (SQ) refers to the stability of encoding in a deep layer that is calculated with the relative ratio of stable rank and condition number of a layer. 
+<img src="https://render.githubusercontent.com/render/math?math=arctan\; s(\boldsymbol{W}_i) / \kappa(\boldsymbol{W}_i)">
 
-*Stable quality* (SQ) refers to the stability of encoding in a deep layer that is calculated with the relative ratio of stable rank and condition number of a layer. Stable rank encodes the space expansion under the matrix mapping of the layer, and condition number indicates the numerical sensitivity of the mapping layer. Altogether the measure introduces a quality measure of the layer as an autoencoder. *Effective rank* (E) refers to the dimension of the output space of the transformation operated by a deep layer that is calculated with the Shannon entropy of the normalized singular values of a layer as defined in.
+*Effective rank* (E) refers to the dimension of the output space of the transformation operated by a deep layer that is calculated with the Shannon entropy of the normalized singular values of a layer as defined in.
 
-*Frobenius norm* (F) refers to the magnitude of a deep layer that is calculated with the sum of the squared values of a weight tensor. Frobenius norm is also calculated with the sum of the squared singular values of a layer. *Spectral norm* (S) refers to the maximum magnitude of mapping by a transformation operated by a layer that is calculated as the maximum singular value of a weight tensor.
-<div align="center">
- 
-<img width="700" alt="136481979-b2241e0a-b859-4a9c-a2a7-bc0e5cb4f3ad" src="https://user-images.githubusercontent.com/77180677/136673335-97bf4a34-61fd-44aa-9328-b213fcc02aae.png">
+*Frobenius norm* (F) refers to the magnitude of a deep layer that is calculated with the sum of the squared values of a weight tensor.
 
-</div>
+*Spectral norm* (S) refers to the maximum magnitude of mapping by a transformation operated by a layer that is calculated as the maximum singular value of a weight tensor.
 
 The notation convention used in Table I to represent different quality  metrics is: <img src="https://render.githubusercontent.com/render/math?math=Q_{M}^{AGG}"> where  aggregation AGG ∈ {L2 = depth-normalized L2 norm, p = depth-normalized product} and metric M ∈ {SQ = stable quality, E = effective rank, F = Frobenius norm, S = stable norm}.
 
