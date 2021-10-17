@@ -68,5 +68,11 @@ We use `Python 3.7`.
 Please find required libraries in the `requirements.txt` file.
 
 ### Usage ###
+#### Pretrained Models ####
+GenProb pretrianed model weights should be placed in the `GenProb/models/GenProb`. Other pretrained model weight may be placed anywhere, and the path must be specified in `source/parsing_agent.py`.
+
+Within `source/main.py`, the library of models must be specified, alongside the hyperparameter configuration wanted. For GenProb, that includes the number of epochs trained for, and the dataset. Evaluations may be done in batches, using the boolean `new`. If set to 0, evaluation will begin at the index specified by `start`. The name of the file the results should be appened to must be specified as well. Otherwise, it will begin at the first file in the folder, and appened results to a new file.
+
+This outputs a csv file, with the metrics evaluation on a layer-wise basis. These may be aggregated as wanted, or by using methods specified in the paper through use of the file `source/qualities.py`.
 
 ### Common Issues (running list) ###
