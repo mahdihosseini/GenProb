@@ -69,7 +69,7 @@ class ParsingAgent:
             self.sspace = glob.glob("../models/zenNAS/" + self.dataset + "/*")
 
         elif(bench == 'LilJon' or bench=='GenProb'):
-            self.sspace = glob.glob(sys.path[0][0:-7]+"/models/GenProb/raw/*_" + self.dataset + "_epoch_" + self.hp + ".pth.tar")
+            self.sspace = glob.glob(sys.path[0][0:-7]+"/models/GenProb/*_" + self.dataset + "_epoch_" + self.hp + ".pth.tar")
 
         if(new != 1):
             self.index = start
