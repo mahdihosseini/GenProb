@@ -38,17 +38,18 @@ def main(benchmark, dataset, hp, new, start):
 
 if __name__ == "__main__":
     benchmark = 'LilJon' #from NATSS, NATST, NAS101, NAS201, DEMOGEN, NLP, zenNET, LilJon
-    dataset = 'CIFAR10' #For NATs -> ImageNet16-120, cifar10, cifar100
+    dataset = 'CIFAR10' #For NASTSS and NATST -> ImageNet16-120, cifar10, cifar100
                                 #For DEMOGEN -> NIN_CIFAR10, RESNET_CIFAR10, RESNET_CIFAR100
                                 #For zenNet  -> CIFAR10, CIFAR100, ImageNet
-                                #For LilJon  -> CIFAR10, CIFAR100
-    hp = '37'
-    new = 1
+                                #For GenProb  -> CIFAR10, CIFAR100
+    hp = '37'            #For NATST --> 12 and 90 epochs
+                         #For NATST --> 12 and 200 epochs
+    new = 1              # 1 --> Start a new excel file and parse all model files     0 --> Append to a file and start from model at index start
     start = 0 
 
     if(benchmark == 'LilJon'):
-        for epoch in range(int(sys.argv[1]), int(sys.argv[2])):
-            print(epoch)
+        for epoch in range(int(sys.argv[1]), int(sys.argv[2])):   #for GenProb specify range of epochs to parse with command line argument
+            print(epoch)                                          #arg1 > arg2 and both in [0,69]
             main(benchmark, dataset, str(epoch), new, start)
     else:
         main(benchmark, dataset, hp, new, start)
