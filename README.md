@@ -12,7 +12,7 @@
     + [Common Issues (running list)](#common-issues--running-list-)
   * [TODO](#todo)
 
-## Introduction ##
+## Overview ##
 In Search of Probeable Generalization Measures (LINK TO PAPER) evaluates and compares generalization measures to establish firm ground for further investigation and incite the production of novel deep learning algorithms that improve generalization. This repository contains the scripts used to parse through GenProb, a dataset of trained deep CNNs, processing model layer weights and computing generalization measures. You can use this code to better understand how GenProb can be used to test generalization measures and HPO algorithms. Measure calculation scripts are also provided.
 
 ![image](https://user-images.githubusercontent.com/77180677/137248344-66d65abf-0a94-4b43-a269-b9f2b6c78e12.png)
