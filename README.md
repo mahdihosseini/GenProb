@@ -1,4 +1,10 @@
 # [In Search of Probeable Generalization Measures]() #
+Exciting News! In Search of Probeable Generalization Measures has been accepted to the International Conference on Machine Learning and Applications (ICMLA) 2021 for Oral Presentation!
+
+> [**In Search of Probeable Generalization Measures**](link),            
+> Jonathan Jaegerman, Khalil Damouni, Mahdi S. Hosseini, Konstantinos N. Plataniotis
+> *In Proceedings of the IEEE International Conference on Machine Learning and Applications ([ICMLA](https://www.icmla-conference.org/icmla21/))* 
+
 
 ## Table of Contents ##
 - [Adas: Adaptive Scheduling of Stochastic Gradients](#adas--adaptive-scheduling-of-stochastic-gradients)
