@@ -1,7 +1,7 @@
-# [In Search of Probeable Generalization Measures]() #
+# [In Search of Probeable Generalization Measures](https://arxiv.org/abs/2110.12259) #
 Exciting News! In Search of Probeable Generalization Measures has been accepted to the International Conference on Machine Learning and Applications (ICMLA) 2021 for Oral Presentation!
 
-> [**In Search of Probeable Generalization Measures**](link),            
+> [**In Search of Probeable Generalization Measures**](https://arxiv.org/abs/2110.12259),            
 > Jonathan Jaegerman, Khalil Damouni, Mahdi S. Hosseini, Konstantinos N. Plataniotis,
 > *In Proceedings of the IEEE International Conference on Machine Learning and Applications ([ICMLA](https://www.icmla-conference.org/icmla21/))* 
 
@@ -19,7 +19,7 @@ Exciting News! In Search of Probeable Generalization Measures has been accepted 
   * [TODO](#todo)
 
 ## Overview ##
-In Search of Probeable Generalization Measures (LINK TO PAPER) evaluates and compares generalization measures to establish firm ground for further investigation and incite the production of novel deep learning algorithms that improve generalization. This repository contains the scripts used to parse through GenProb, a dataset of trained deep CNNs, processing model layer weights and computing generalization measures. You can use this code to better understand how GenProb can be used to test generalization measures and HPO algorithms. Measure calculation scripts are also provided.
+[In Search of Probeable Generalization Measures](https://arxiv.org/abs/2110.12259) evaluates and compares generalization measures to establish firm ground for further investigation and incite the production of novel deep learning algorithms that improve generalization. This repository contains the scripts used to parse through GenProb, a dataset of trained deep CNNs, processing model layer weights and computing generalization measures. You can use this code to better understand how GenProb can be used to test generalization measures and HPO algorithms. Measure calculation scripts are also provided.
 
 ![image](https://user-images.githubusercontent.com/77180677/137248344-66d65abf-0a94-4b43-a269-b9f2b6c78e12.png)
 
